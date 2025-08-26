@@ -13,3 +13,6 @@
 [submodule "drivers/net/wireless/mediatek/mt76"]
 	path = drivers/net/wireless/mediatek/mt76
 	url = https://github.com/akabul0us/mt76
+[submodule "kali-nethunter-kernel-builder"]
+	path = kali-nethunter-kernel-builder
+	url = https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel-builder
