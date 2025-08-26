@@ -4,6 +4,8 @@
 
 #include <linux/compiler.h>
 #include <linux/limits.h>
+#include <linux/types.h>
+#include <linux/kernel.h>
 
 /*
  * In the fallback code below, we need to compute the minimum and
@@ -203,6 +205,35 @@
 
 #endif /* COMPILER_HAS_GENERIC_BUILTIN_OVERFLOW */
 
+static inline __must_check size_t __ab_c_size(size_t n, size_t size, size_t c)
+{
+	size_t bytes;
+
+	if (check_mul_overflow(n, size, &bytes))
+		return SIZE_MAX;
+	if (check_add_overflow(bytes, c, &bytes))
+		return SIZE_MAX;
+
+	return bytes;
+}
+
+/**
+ * struct_size() - Calculate size of structure with trailing array.
+ * @p: Pointer to the structure.
+ * @member: Name of the array member.
+ * @n: Number of elements in the array.
+ *
+ * Calculates size of memory needed for structure @p followed by an
+ * array of @n @member elements.
+ *
+ * Return: number of bytes needed or SIZE_MAX on overflow.
+ */
+#define struct_size(p, member, n)					\
+	__ab_c_size(n,							\
+		    sizeof(*(p)->member) + __must_be_array((p)->member),\
+		    sizeof(*(p)))
+
+
 /** check_shl_overflow() - Calculate a left-shifted value and check overflow
  *
  * @a: Value to be shifted
@@ -352,8 +383,8 @@ static inline size_t __must_check size_sub(size_t minuend, size_t subtrahend)
  * array of @count number of @member elements.
  *
  * Return: number of bytes needed or SIZE_MAX on overflow.
- */
+
 #define struct_size(p, member, count)					\
 	size_add(sizeof(*(p)), flex_array_size(p, member, count))
-
+*/
 #endif /* __LINUX_OVERFLOW_H */
