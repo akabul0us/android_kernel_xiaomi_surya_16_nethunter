@@ -67,6 +67,11 @@ modules.builtin
 /debian/
 
 #
+#compiled modules directory for packaging .ko files
+#
+/modules/
+
+#
 # tar directory (make tar*-pkg)
 #
 /tar-install/
