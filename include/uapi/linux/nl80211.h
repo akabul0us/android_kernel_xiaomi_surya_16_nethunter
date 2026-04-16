@@ -5469,6 +5469,7 @@ enum nl80211_scan_flags {
 	NL80211_SCAN_FLAG_LOW_SPAN				= 1<<8,
 	NL80211_SCAN_FLAG_LOW_POWER				= 1<<9,
 	NL80211_SCAN_FLAG_HIGH_ACCURACY				= 1<<10,
+	NL80211_SCAN_FLAG_RANDOM_SN                             = 1<<11,
 };
 
 /**
