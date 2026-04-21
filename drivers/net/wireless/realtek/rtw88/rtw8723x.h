@@ -522,3 +522,4 @@ static inline void rtw8723x_iqk_path_adda_on(struct rtw_dev *rtwdev, u32 value)
 }
 
 #endif /* __RTW8723X_H__ */
+

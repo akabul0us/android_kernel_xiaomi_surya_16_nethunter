@@ -786,3 +786,4 @@ MODULE_AUTHOR("Realtek Corporation");
 MODULE_AUTHOR("Fiona Klute <fiona.klute@gmx.de>");
 MODULE_DESCRIPTION("Common functions for Realtek 802.11n wireless 8723x drivers");
 MODULE_LICENSE("Dual BSD/GPL");
+
