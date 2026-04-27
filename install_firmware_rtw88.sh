@@ -4,7 +4,7 @@
 #Run this script in the native Android shell as root
 #to install any missing rtw88 firmware.
 #
-##!/system/bin/sh
+#!/system/bin/sh
 if [ "$EUID" != 0 ]; then
     echo "Run it as root"
     exit 1
