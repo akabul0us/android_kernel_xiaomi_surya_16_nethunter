@@ -1,15 +1,6 @@
-Welcome to
-
-#     # ####### ####### #     # #     # #     # ####### ####### ######  
-##    # #          #    #     # #     # ##    #    #    #       #     # 
-# #   # #          #    #     # #     # # #   #    #    #       #     # 
-#  #  # #####      #    ####### #     # #  #  #    #    #####   ######  
-#   # # #          #    #     # #     # #   # #    #    #       #   #   
-#    ## #          #    #     # #     # #    ##    #    #       #    #  
-#     # #######    #    #     #  #####  #     #    #    ####### #     # 
-
-Device: 	Surya (Poco X3 NFC)
-ROM version:	Android 16 (crDroid 12.x)
-Maintainer:	Akabulous
-Source:		https://www.github.com/akabul0us/android_kernel_xiaomi_surya_16_nethunter
-Hack:		the planet
+Welcome to Nethunter
+Device: 		Poco X3 NFX (surya/karna)
+ROM:			Android 15/16 (LineageOS 22.x, crDroid 12.x)
+Maintainer:		Akabulous
+Source:			https://www.github.com/akabul0us/android_kernel_xiaomi_surya_16_nethunter
+Contact:		https://t.me/akabulous
